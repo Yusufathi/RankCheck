@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:backgroundTint="@android:color/background_dark"
+    android:scrollbarTrackHorizontal="@drawable/background"
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/flexLPBoxID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="56dp"
+        android:text="0 LP"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toStartOf="@+id/StatusBarRightID"
+        app:layout_constraintTop_toBottomOf="@+id/flexqBoxID" />
+
+    <ImageView
+        android:id="@+id/StatusBarRightID"
+        android:layout_width="49px"
+        android:layout_height="2340px"
+        android:contentDescription="@android:string/status_bar_notification_info_overflow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorPrimaryDark" />
+
+    <ImageView
+        android:id="@+id/HiddenbtnID"
+        android:layout_width="113dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="HiddenBtnClick"
+        app:layout_constraintEnd_toStartOf="@+id/StatusBarRightID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/challenger" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="236dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Summoner Name :"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Server"
+        android:layout_width="185dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Server :"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NameBoxID" />
+
+    <EditText
+        android:id="@+id/NameBoxID"
+        android:layout_width="243dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <EditText
+        android:id="@+id/nameBoxID"
+        android:layout_width="243dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Your IGN"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <EditText
+        android:id="@+id/ApiKeyBoxID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="API KEY"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/Name"
+        app:layout_constraintEnd_toStartOf="@+id/HiddenbtnID"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/CheckBtn"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="checkBtnClick"
+        android:text="Check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverSpinnerID" />
+
+    <Spinner
+        android:id="@+id/serverSpinnerID"
+        android:layout_width="243dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="48dp"
+        android:background="@android:color/background_light"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Server" />
+
+    <ImageView
+        android:id="@+id/flexqImgBoxID"
+        android:layout_width="390px"
+        android:layout_height="450px"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/flexqBoxID"
+        app:layout_constraintEnd_toStartOf="@+id/StatusBarRightID"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/soloqImgBoxID"
+        app:srcCompat="@drawable/unranked" />
+
+    <ImageView
+        android:id="@+id/soloqImgBoxID"
+        android:layout_width="390px"
+        android:layout_height="450px"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/soloqBoxID"
+        app:layout_constraintEnd_toStartOf="@+id/flexqImgBoxID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/unranked" />
+
+    <TextView
+        android:id="@+id/flexqBoxID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="104dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Unranked"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/StatusBarRightID" />
+
+    <TextView
+        android:id="@+id/soloqBoxID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="104dp"
+        android:fontFamily="@font/aldrich"
+        android:text="Unranked"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="12dp"
+        android:text="FlexQ"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/flexqImgBoxID"
+        app:layout_constraintEnd_toStartOf="@+id/StatusBarRightID" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="51dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="16dp"
+        android:text="SoloQ"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/soloqImgBoxID"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/soloLPBoxID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="8dp"
+        android:text="0 LP"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soloqBoxID" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
